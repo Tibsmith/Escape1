@@ -41,7 +41,7 @@
                         </value>
                         <next>
                           <block type="controls_if" id="7" inline="false">
-                            <mutation elseif="2" else="1"></mutation>
+                            <mutation elseif="1" else="1"></mutation>
                             <value name="IF0">
                               <block type="logic_compare" id="8" inline="true">
                                 <field name="OP">LT</field>
@@ -77,24 +77,6 @@
                             </value>
                             <statement name="DO1">
                               <block type="movement_left" id="11"></block>
-                            </statement>
-                            <value name="IF2">
-                              <block type="logic_compare" id="506" inline="true">
-                                <field name="OP">GT</field>
-                                <value name="A">
-                                  <block type="variables_get" id="518">
-                                    <field name="VAR">Left</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <block type="math_number" id="519">
-                                    <field name="NUM">1</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <statement name="DO2">
-                              <block type="movement_left" id="542"></block>
                             </statement>
                             <statement name="ELSE">
                               <block type="movement_forward" id="417"></block>
