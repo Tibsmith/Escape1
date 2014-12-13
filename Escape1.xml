@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="1" x="153" y="141">
+  <block type="oled_cleardisplay" id="1" x="126" y="65">
     <next>
       <block type="controls_whileUntil" id="2" inline="false">
         <field name="MODE">UNTIL</field>
@@ -9,27 +9,27 @@
           </block>
         </value>
         <statement name="DO">
-          <block type="variables_set" id="4" inline="true">
-            <field name="VAR">Left_2</field>
+          <block type="variables_set" id="6" inline="true">
+            <field name="VAR">Left</field>
             <value name="VALUE">
-              <block type="sensor_object" id="5">
-                <field name="OBJECT">LEFTSIDE</field>
+              <block type="sensor_object" id="7">
+                <field name="OBJECT">LEFTFRONT</field>
               </block>
             </value>
             <next>
-              <block type="variables_set" id="6" inline="true">
-                <field name="VAR">Left</field>
+              <block type="variables_set" id="8" inline="true">
+                <field name="VAR">Right</field>
                 <value name="VALUE">
-                  <block type="sensor_object" id="7">
-                    <field name="OBJECT">LEFTFRONT</field>
+                  <block type="sensor_object" id="9">
+                    <field name="OBJECT">RIGHTFRONT</field>
                   </block>
                 </value>
                 <next>
-                  <block type="variables_set" id="8" inline="true">
-                    <field name="VAR">Right</field>
+                  <block type="variables_set" id="4" inline="true">
+                    <field name="VAR">Left_2</field>
                     <value name="VALUE">
-                      <block type="sensor_object" id="9">
-                        <field name="OBJECT">RIGHTFRONT</field>
+                      <block type="sensor_object" id="5">
+                        <field name="OBJECT">LEFTSIDE</field>
                       </block>
                     </value>
                     <next>
