@@ -1,99 +1,75 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="1" inline="false" x="147" y="172">
-    <field name="MODE">UNTIL</field>
-    <value name="NUMBER">
-      <block type="sensor_button" id="2">
-        <field name="OBJECT">ENTER</field>
-      </block>
-    </value>
-    <statement name="DO">
-      <block type="variables_set" id="757" inline="true">
-        <field name="VAR">forewards</field>
-        <value name="VALUE">
-          <block type="sensor_line" id="746">
-            <field name="LINE">MIDDLE</field>
+  <block type="oled_cleardisplay" id="99" x="153" y="141">
+    <next>
+      <block type="controls_whileUntil" id="1" inline="false">
+        <field name="MODE">UNTIL</field>
+        <value name="NUMBER">
+          <block type="sensor_button" id="2">
+            <field name="OBJECT">ENTER</field>
           </block>
         </value>
-        <next>
-          <block type="variables_set" id="3" inline="true">
+        <statement name="DO">
+          <block type="variables_set" id="5" inline="true">
             <field name="VAR">Left</field>
             <value name="VALUE">
-              <block type="sensor_object" id="4">
+              <block type="sensor_object" id="6">
                 <field name="OBJECT">LEFTFRONT</field>
               </block>
             </value>
             <next>
-              <block type="variables_set" id="5" inline="true">
+              <block type="variables_set" id="7" inline="true">
                 <field name="VAR">Right</field>
                 <value name="VALUE">
-                  <block type="sensor_object" id="6">
+                  <block type="sensor_object" id="8">
                     <field name="OBJECT">RIGHTFRONT</field>
                   </block>
                 </value>
                 <next>
-                  <block type="controls_if" id="7" inline="false">
-                    <mutation elseif="2" else="1"></mutation>
+                  <block type="controls_if" id="9" inline="false">
+                    <mutation elseif="1" else="1"></mutation>
                     <value name="IF0">
-                      <block type="logic_compare" id="8" inline="true">
+                      <block type="logic_compare" id="10" inline="true">
                         <field name="OP">LT</field>
                         <value name="A">
-                          <block type="variables_get" id="9">
+                          <block type="variables_get" id="11">
                             <field name="VAR">Left</field>
                           </block>
                         </value>
                         <value name="B">
-                          <block type="math_number" id="10">
+                          <block type="math_number" id="12">
                             <field name="NUM">60</field>
                           </block>
                         </value>
                       </block>
                     </value>
                     <statement name="DO0">
-                      <block type="movement_right" id="15"></block>
+                      <block type="movement_right" id="13"></block>
                     </statement>
                     <value name="IF1">
-                      <block type="logic_compare" id="12" inline="true">
+                      <block type="logic_compare" id="54" inline="true">
                         <field name="OP">LT</field>
                         <value name="A">
-                          <block type="variables_get" id="13">
+                          <block type="variables_get" id="62">
                             <field name="VAR">Right</field>
                           </block>
                         </value>
                         <value name="B">
-                          <block type="math_number" id="14">
+                          <block type="math_number" id="55">
                             <field name="NUM">60</field>
                           </block>
                         </value>
                       </block>
                     </value>
                     <statement name="DO1">
-                      <block type="movement_left" id="11"></block>
-                    </statement>
-                    <value name="IF2">
-                      <block type="logic_compare" id="792" inline="true">
-                        <field name="OP">LT</field>
-                        <value name="A">
-                          <block type="variables_get" id="802">
-                            <field name="VAR">forewards</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="793">
-                            <field name="NUM">60</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <statement name="DO2">
-                      <block type="movement_forward" id="846"></block>
+                      <block type="movement_left" id="80"></block>
                     </statement>
                     <statement name="ELSE">
-                      <block type="movement_right" id="857"></block>
+                      <block type="movement_forward" id="90"></block>
                     </statement>
                     <next>
-                      <block type="robot_delay" id="17" inline="true">
+                      <block type="robot_delay" id="14" inline="true">
                         <value name="DELAY">
-                          <block type="math_number" id="18">
+                          <block type="math_number" id="15">
                             <field name="NUM">300</field>
                           </block>
                         </value>
@@ -104,11 +80,11 @@
               </block>
             </next>
           </block>
+        </statement>
+        <next>
+          <block type="movement_stop" id="16"></block>
         </next>
       </block>
-    </statement>
-    <next>
-      <block type="movement_stop" id="28"></block>
     </next>
   </block>
 </xml>
