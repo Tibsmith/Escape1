@@ -44,7 +44,7 @@
                             <mutation elseif="2" else="1"></mutation>
                             <value name="IF0">
                               <block type="logic_compare" id="8" inline="true">
-                                <field name="OP">GT</field>
+                                <field name="OP">LT</field>
                                 <value name="A">
                                   <block type="variables_get" id="9">
                                     <field name="VAR">Left</field>
@@ -62,7 +62,7 @@
                             </statement>
                             <value name="IF1">
                               <block type="logic_compare" id="12" inline="true">
-                                <field name="OP">GT</field>
+                                <field name="OP">LT</field>
                                 <value name="A">
                                   <block type="variables_get" id="13">
                                     <field name="VAR">Right</field>
@@ -80,7 +80,7 @@
                             </statement>
                             <value name="IF2">
                               <block type="logic_compare" id="506" inline="true">
-                                <field name="OP">LT</field>
+                                <field name="OP">GT</field>
                                 <value name="A">
                                   <block type="variables_get" id="518">
                                     <field name="VAR">Left</field>
