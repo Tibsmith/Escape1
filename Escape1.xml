@@ -14,7 +14,7 @@
         </value>
         <next>
           <block type="oled_drawtext" id="184">
-            <field name="TEXT">Eat It</field>
+            <field name="TEXT">Sod Off We are top banana</field>
             <next>
               <block type="controls_whileUntil" id="1" inline="false">
                 <field name="MODE">UNTIL</field>
