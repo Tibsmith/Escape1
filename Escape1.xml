@@ -1,1 +1,46 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_if" id="89" inline="false" x="192" y="63">
+    <mutation elseif="1" else="1"></mutation>
+    <value name="IF0">
+      <block type="sensor_object" id="75">
+        <field name="OBJECT">LEFTFRONT</field>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="movement_setmotors" id="323" inline="true">
+        <value name="BOTHMOVLEFT">
+          <block type="math_number" id="333">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+        <value name="BOTHMOVRIGHT">
+          <block type="math_number" id="334">
+            <field name="NUM">-100</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="IF1">
+      <block type="sensor_object" id="260">
+        <field name="OBJECT">RIGHTFRONT</field>
+      </block>
+    </value>
+    <statement name="DO1">
+      <block type="movement_setmotors" id="335" inline="true">
+        <value name="BOTHMOVLEFT">
+          <block type="math_number" id="337">
+            <field name="NUM">-100</field>
+          </block>
+        </value>
+        <value name="BOTHMOVRIGHT">
+          <block type="math_number" id="336">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <statement name="ELSE">
+      <block type="movement_forward" id="300"></block>
+    </statement>
+  </block>
+</xml>
