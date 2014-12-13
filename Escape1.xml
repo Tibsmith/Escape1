@@ -1,4 +1,7 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="sensor_object" id="135" x="512" y="118">
+    <field name="OBJECT">LEFTSIDE</field>
+  </block>
   <block type="oled_cleardisplay" id="99" x="153" y="141">
     <next>
       <block type="controls_whileUntil" id="1" inline="false">
@@ -9,70 +12,98 @@
           </block>
         </value>
         <statement name="DO">
-          <block type="variables_set" id="5" inline="true">
-            <field name="VAR">Left</field>
+          <block type="variables_set" id="142" inline="true">
+            <field name="VAR">Left_2</field>
             <value name="VALUE">
-              <block type="sensor_object" id="6">
-                <field name="OBJECT">LEFTFRONT</field>
+              <block type="sensor_object" id="134">
+                <field name="OBJECT">LEFTSIDE</field>
               </block>
             </value>
             <next>
-              <block type="variables_set" id="7" inline="true">
-                <field name="VAR">Right</field>
+              <block type="variables_set" id="5" inline="true">
+                <field name="VAR">Left</field>
                 <value name="VALUE">
-                  <block type="sensor_object" id="8">
-                    <field name="OBJECT">RIGHTFRONT</field>
+                  <block type="sensor_object" id="6">
+                    <field name="OBJECT">LEFTFRONT</field>
                   </block>
                 </value>
                 <next>
-                  <block type="controls_if" id="9" inline="false">
-                    <mutation elseif="1" else="1"></mutation>
-                    <value name="IF0">
-                      <block type="logic_compare" id="10" inline="true">
-                        <field name="OP">LT</field>
-                        <value name="A">
-                          <block type="variables_get" id="11">
-                            <field name="VAR">Left</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="12">
-                            <field name="NUM">60</field>
-                          </block>
-                        </value>
+                  <block type="variables_set" id="7" inline="true">
+                    <field name="VAR">Right</field>
+                    <value name="VALUE">
+                      <block type="sensor_object" id="8">
+                        <field name="OBJECT">RIGHTFRONT</field>
                       </block>
                     </value>
-                    <statement name="DO0">
-                      <block type="movement_right" id="13"></block>
-                    </statement>
-                    <value name="IF1">
-                      <block type="logic_compare" id="54" inline="true">
-                        <field name="OP">LT</field>
-                        <value name="A">
-                          <block type="variables_get" id="62">
-                            <field name="VAR">Right</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="55">
-                            <field name="NUM">60</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <statement name="DO1">
-                      <block type="movement_left" id="80"></block>
-                    </statement>
-                    <statement name="ELSE">
-                      <block type="movement_forward" id="90"></block>
-                    </statement>
                     <next>
-                      <block type="robot_delay" id="14" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="15">
-                            <field name="NUM">300</field>
+                      <block type="controls_if" id="9" inline="false">
+                        <mutation elseif="2" else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="10" inline="true">
+                            <field name="OP">LT</field>
+                            <value name="A">
+                              <block type="variables_get" id="11">
+                                <field name="VAR">Left</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="12">
+                                <field name="NUM">60</field>
+                              </block>
+                            </value>
                           </block>
                         </value>
+                        <statement name="DO0">
+                          <block type="movement_right" id="13"></block>
+                        </statement>
+                        <value name="IF1">
+                          <block type="logic_compare" id="54" inline="true">
+                            <field name="OP">LT</field>
+                            <value name="A">
+                              <block type="variables_get" id="62">
+                                <field name="VAR">Right</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="55">
+                                <field name="NUM">60</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO1">
+                          <block type="movement_left" id="80"></block>
+                        </statement>
+                        <value name="IF2">
+                          <block type="logic_compare" id="157" inline="true">
+                            <field name="OP">LT</field>
+                            <value name="A">
+                              <block type="variables_get" id="166">
+                                <field name="VAR">Left_2</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="167">
+                                <field name="NUM">60</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO2">
+                          <block type="movement_right" id="196"></block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="movement_forward" id="90"></block>
+                        </statement>
+                        <next>
+                          <block type="robot_delay" id="14" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="15">
+                                <field name="NUM">300</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
