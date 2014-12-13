@@ -18,6 +18,9 @@
             <field name="NUM">-100</field>
           </block>
         </value>
+        <next>
+          <block type="movement_stop" id="365"></block>
+        </next>
       </block>
     </statement>
     <value name="IF1">
@@ -37,6 +40,9 @@
             <field name="NUM">100</field>
           </block>
         </value>
+        <next>
+          <block type="movement_stop" id="405"></block>
+        </next>
       </block>
     </statement>
     <statement name="ELSE">
