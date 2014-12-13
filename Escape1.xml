@@ -106,4 +106,5 @@
       </block>
     </next>
   </block>
+  <block type="robot_delay" id="419" inline="true" x="280" y="549"></block>
 </xml>
