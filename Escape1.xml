@@ -31,8 +31,8 @@
                       <block type="logic_compare" id="11" inline="true">
                         <field name="OP">LT</field>
                         <value name="A">
-                          <block type="variables_get" id="12">
-                            <field name="VAR">Left</field>
+                          <block type="variables_get" id="16">
+                            <field name="VAR">Right</field>
                           </block>
                         </value>
                         <value name="B">
@@ -43,14 +43,14 @@
                       </block>
                     </value>
                     <statement name="DO0">
-                      <block type="movement_right" id="14"></block>
+                      <block type="movement_left" id="18"></block>
                     </statement>
                     <value name="IF1">
                       <block type="logic_compare" id="15" inline="true">
                         <field name="OP">LT</field>
                         <value name="A">
-                          <block type="variables_get" id="16">
-                            <field name="VAR">Right</field>
+                          <block type="variables_get" id="12">
+                            <field name="VAR">Left</field>
                           </block>
                         </value>
                         <value name="B">
@@ -61,7 +61,7 @@
                       </block>
                     </value>
                     <statement name="DO1">
-                      <block type="movement_left" id="18"></block>
+                      <block type="movement_right" id="14"></block>
                     </statement>
                     <statement name="ELSE">
                       <block type="movement_forward" id="124"></block>
