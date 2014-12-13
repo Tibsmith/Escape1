@@ -1,7 +1,4 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="sensor_object" id="135" x="512" y="118">
-    <field name="OBJECT">LEFTSIDE</field>
-  </block>
   <block type="oled_cleardisplay" id="99" x="153" y="141">
     <next>
       <block type="controls_whileUntil" id="1" inline="false">
