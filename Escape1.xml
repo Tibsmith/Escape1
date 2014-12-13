@@ -65,9 +65,9 @@
                   <block type="movement_forward" id="16"></block>
                 </statement>
                 <next>
-                  <block type="robot_delay" id="24" inline="true">
+                  <block type="robot_delay" id="17" inline="true">
                     <value name="DELAY">
-                      <block type="math_number" id="37">
+                      <block type="math_number" id="18">
                         <field name="NUM">10</field>
                       </block>
                     </value>
@@ -79,5 +79,8 @@
         </next>
       </block>
     </statement>
+    <next>
+      <block type="movement_stop" id="28"></block>
+    </next>
   </block>
 </xml>
