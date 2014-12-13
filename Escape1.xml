@@ -28,8 +28,8 @@
                   <block type="variables_set" id="4" inline="true">
                     <field name="VAR">Left_2</field>
                     <value name="VALUE">
-                      <block type="sensor_object" id="75">
-                        <field name="OBJECT">RIGHTSIDE</field>
+                      <block type="sensor_object" id="108">
+                        <field name="OBJECT">LEFTSIDE</field>
                       </block>
                     </value>
                     <next>
@@ -87,7 +87,7 @@
                           </block>
                         </value>
                         <statement name="DO2">
-                          <block type="movement_left" id="36"></block>
+                          <block type="movement_left" id="85"></block>
                         </statement>
                         <statement name="ELSE">
                           <block type="movement_forward" id="23"></block>
