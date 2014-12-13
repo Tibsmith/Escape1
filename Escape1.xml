@@ -25,82 +25,54 @@
                   </block>
                 </value>
                 <next>
-                  <block type="variables_set" id="4" inline="true">
-                    <field name="VAR">Left_2</field>
-                    <value name="VALUE">
-                      <block type="sensor_object" id="108">
-                        <field name="OBJECT">LEFTSIDE</field>
+                  <block type="controls_if" id="10" inline="false">
+                    <mutation elseif="1" else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="11" inline="true">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="variables_get" id="12">
+                            <field name="VAR">Left</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="13">
+                            <field name="NUM">60</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
+                    <statement name="DO0">
+                      <block type="movement_right" id="14"></block>
+                    </statement>
+                    <value name="IF1">
+                      <block type="logic_compare" id="15" inline="true">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="variables_get" id="16">
+                            <field name="VAR">Right</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="17">
+                            <field name="NUM">60</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO1">
+                      <block type="movement_left" id="18"></block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="movement_forward" id="124"></block>
+                    </statement>
                     <next>
-                      <block type="controls_if" id="10" inline="false">
-                        <mutation elseif="2" else="1"></mutation>
-                        <value name="IF0">
-                          <block type="logic_compare" id="11" inline="true">
-                            <field name="OP">LT</field>
-                            <value name="A">
-                              <block type="variables_get" id="12">
-                                <field name="VAR">Left</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <block type="math_number" id="13">
-                                <field name="NUM">60</field>
-                              </block>
-                            </value>
+                      <block type="robot_delay" id="24" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="25">
+                            <field name="NUM">100</field>
                           </block>
                         </value>
-                        <statement name="DO0">
-                          <block type="movement_right" id="14"></block>
-                        </statement>
-                        <value name="IF1">
-                          <block type="logic_compare" id="15" inline="true">
-                            <field name="OP">LT</field>
-                            <value name="A">
-                              <block type="variables_get" id="16">
-                                <field name="VAR">Right</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <block type="math_number" id="17">
-                                <field name="NUM">60</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <statement name="DO1">
-                          <block type="movement_left" id="18"></block>
-                        </statement>
-                        <value name="IF2">
-                          <block type="logic_compare" id="19" inline="true">
-                            <field name="OP">LT</field>
-                            <value name="A">
-                              <block type="variables_get" id="20">
-                                <field name="VAR">Left_2</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <block type="math_number" id="21">
-                                <field name="NUM">60</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <statement name="DO2">
-                          <block type="movement_left" id="85"></block>
-                        </statement>
-                        <statement name="ELSE">
-                          <block type="movement_forward" id="23"></block>
-                        </statement>
-                        <next>
-                          <block type="robot_delay" id="24" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="25">
-                                <field name="NUM">300</field>
-                              </block>
-                            </value>
-                          </block>
-                        </next>
                       </block>
                     </next>
                   </block>
